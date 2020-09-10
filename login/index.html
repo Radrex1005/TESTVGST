@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>VGST_LOGIN</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+
+<form >
+
+  <div class="imgcontainer">
+    <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
+  </div>
+  
+  <button id="1" class="submit">GoogleAuth</button>
+</form>
+              
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBGO2B6hQTK4K5OE5zrbJ02vjdi6f28Erk",
+    authDomain: "vgstproposals.firebaseapp.com",
+    databaseURL: "https://vgstproposals.firebaseio.com",
+    projectId: "vgstproposals",
+    storageBucket: "vgstproposals.appspot.com",
+    messagingSenderId: "552421108644",
+    appId: "1:552421108644:web:6e33c08cbc16366cdeef31",
+    measurementId: "G-0QNPLQVH6Y"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>   
+<script src="js/login.js"></script>
+</body>
+</html>
