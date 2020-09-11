@@ -1,22 +1,28 @@
-var provider = new firebase.auth.GoogleAuthProvider();
 
-var test = document.getElementById('test');
-test.onclick = function() {
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    console.log(user);
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}
+
+
+  const auth = firebase.auth;
+  auth.signInWithEmailAndPassword(email,pass);
+  auth.createUserWithEmailAndPassword(email,pass);
+  auth.onAuthStateChanged(firebaseuser => {});
+  
+
+
+
+const txtEmail = document.getElementById('txtEmail');
+const txtPassword = document.getElementById('txtPassword');
+const btnLogin = document.getElementById('btnLogin');
+const btnSignUp = document.getElementById('btnSignUp');
+
+
+btnLogin.addEventListener('click',e =>{
+  const email = txtEmail.value;
+  const password = txtPassword.value;
+  const auth = firebase.auth();
+
+  const promise = auth.signInWithEmailAndPassword(email,pass);
+  promise.catch(e => console.log(e.message));
+
+
+
+})
