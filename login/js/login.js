@@ -2,6 +2,7 @@
     var user;
     var clickBox = document.getElementById('1');
     clickBox.onclick = addBox;
+
 function addBox() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -9,6 +10,7 @@ function addBox() {
         // The signed-in user info.
         var user = result.user;
         console.log(user);
+        console.log('hello');
         // ...
       }).catch(function(error) {
         // Handle Errors here.
