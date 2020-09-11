@@ -42,6 +42,22 @@ form {
     width: 13%;
     transition: 0.5s ease-out;
   }
+  .submit03 hide{
+  display: none;
+  }
+  .submit03{
+    background-color: #cc4141;
+    color: white;
+    padding: 14px 20px;
+    margin: 0vw 0vw 1vw 42.5vw;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: 13%;
+    transition: 0.5s ease-out;
+  }
+
   button:hover {
     opacity: 0.8;
   }
