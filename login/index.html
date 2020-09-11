@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <title>VGST_LOGIN</title>
         <link rel="stylesheet" href="css/login.css">
+        <script src="js/login.js"></script>
+
     </head>
     <body>
 
@@ -13,34 +15,44 @@
   <div class="imgcontainer">
     <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
   </div>
+  <div class="container">
+  <label>Enter Email</label>
+  <input id="txtEmail" type="email" >
+  <label>Password</label>
+  <input id="txtPassword" type="password">
+
+  <button  id="btnLogin" class="submit01">Login</button>
+  <button  id="btnSignUp" class="submit02">Sign  in</button>
+</div>
 </form>
               
 
-<div  id="test" class="submit">GoogleAuth</div>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-      <script src="js/login.js"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
 
-      <!-- TODO: Add SDKs for Firebase products that you want to use
-          https://firebase.google.com/docs/web/setup#available-libraries -->
-      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyB85FVM5oFJMCKwjPn3-4WggRyDPLbfayM",
-          authDomain: "test-vgst.firebaseapp.com",
-          databaseURL: "https://test-vgst.firebaseio.com",
-          projectId: "test-vgst",
-          storageBucket: "test-vgst.appspot.com",
-          messagingSenderId: "182173305191",
-          appId: "1:182173305191:web:8fe759c2f8fa967dea87c2",
-          measurementId: "G-1YBD4TJXXW"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB85FVM5oFJMCKwjPn3-4WggRyDPLbfayM",
+    authDomain: "test-vgst.firebaseapp.com",
+    databaseURL: "https://test-vgst.firebaseio.com",
+    projectId: "test-vgst",
+    storageBucket: "test-vgst.appspot.com",
+    messagingSenderId: "182173305191",
+    appId: "1:182173305191:web:8fe759c2f8fa967dea87c2",
+    measurementId: "G-1YBD4TJXXW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 </script>
+
+      
+</script>
+
 </body>
 </html>
