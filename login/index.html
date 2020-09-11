@@ -4,36 +4,17 @@
     <head>
         <meta charset="UTF-8">
         <title>VGST_LOGIN</title>
-            
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+     
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
-    
-    <link rel="stylesheet" href="css/login.css">
-    </head>
-    <body>
 
-<form>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
 
-  <div class="imgcontainer">
-    <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
-  </div>
-  <div class="container">
-  <label>Enter Email</label>
-  <input id="txtEmail" type="email" >
-  <label>Password</label>
-  <input id="txtPassword" type="password">
-
-  <button  id="btnLogin" class="submit01">Login</button>
-  <button  id="btnSignUp" class="submit02">Sign  in</button>
-</div>
-<button id="btnLogout" class="submit03 hide">Logout</button>
-         
-
-<!--
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+</form>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -50,10 +31,27 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
--->
-<script src="js/login.js"></script>
+<script src="js/login.js"></script> 
+    <link rel="stylesheet" href="css/login.css">
 
-</form>
+
+    </head>
+    <body>
+      <form>
+  <div class="imgcontainer">
+    <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
+  </div>
+  <div class="container">
+  <label>Enter Email</label>
+  <input id="txtEmail" type="email" >
+  <label>Password</label>
+  <input id="txtPassword" type="password">
+
+  <button onclick="print()" id="btnLogin" class="submit01">Login</button>
+  <button  id="btnSignUp" class="submit02">Sign  in</button>
+</div>
+<button id="btnLogout" class="submit03 hide">Logout</button>
+
 </body>
 </html>
 
