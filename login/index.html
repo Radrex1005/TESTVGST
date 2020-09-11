@@ -13,36 +13,34 @@
   <div class="imgcontainer">
     <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
   </div>
-  
-  <button id="test" class="submit">GoogleAuth</button>
 </form>
               
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<button  id="test" class="submit">GoogleAuth</button>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="js/login.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
-
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyBGO2B6hQTK4K5OE5zrbJ02vjdi6f28Erk",
-    authDomain: "vgstproposals.firebaseapp.com",
-    databaseURL: "https://vgstproposals.firebaseio.com",
-    projectId: "vgstproposals",
-    storageBucket: "vgstproposals.appspot.com",
-    messagingSenderId: "552421108644",
-    appId: "1:552421108644:web:6e33c08cbc16366cdeef31",
-    measurementId: "G-0QNPLQVH6Y"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>   
-<script src="js/login.js"></script>
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyB85FVM5oFJMCKwjPn3-4WggRyDPLbfayM",
+          authDomain: "test-vgst.firebaseapp.com",
+          databaseURL: "https://test-vgst.firebaseio.com",
+          projectId: "test-vgst",
+          storageBucket: "test-vgst.appspot.com",
+          messagingSenderId: "182173305191",
+          appId: "1:182173305191:web:8fe759c2f8fa967dea87c2",
+          measurementId: "G-1YBD4TJXXW"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+</script>
 </body>
 </html>
