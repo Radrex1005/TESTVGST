@@ -1,5 +1,7 @@
-var provider = new firebase.auth.GoogleAuthProvider();
-var user;
+    var provider = new firebase.auth.GoogleAuthProvider();
+    var user;
+    var clickBox = document.getElementById('1');
+    clickBox.onclick = addBox;
 function addBox() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -20,5 +22,3 @@ function addBox() {
       });
   }
   
-  var clickBox = document.getElementById('1');
-  clickBox.onclick = addBox;
