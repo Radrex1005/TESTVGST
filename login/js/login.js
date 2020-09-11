@@ -1,60 +1,23 @@
 
-  var firebaseConfig = {
-    apiKey: "AIzaSyB85FVM5oFJMCKwjPn3-4WggRyDPLbfayM",
-    authDomain: "test-vgst.firebaseapp.com",
-    databaseURL: "https://test-vgst.firebaseio.com",
-    projectId: "test-vgst",
-    storageBucket: "test-vgst.appspot.com",
-    messagingSenderId: "182173305191",
-    appId: "1:182173305191:web:8fe759c2f8fa967dea87c2",
-    measurementId: "G-1YBD4TJXXW"
-  };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-  //   const auth = firebase.auth;
-   //  auth.signInWithEmailAndPassword(email,pass);
-   //  auth.createUserWithEmailAndPassword(email,pass);
-   //  auth.onAuthStateChanged(firebaseuser => {});
+var provider = new firebase.auth.GoogleAuthProvider();
 
 
-    const txtEmail = document.getElementById('txtEmail');
-    const txtPassword = document.getElementById('txtPassword');
-    const btnLogin = document.getElementById('btnLogin');
-    const btnSignUp = document.getElementById('btnSignUp');
+function print(){
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+}
 
-
-  btnLogin.addEventListener('click', e => {
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
-    const auth = firebase.auth();
-
-    const promise = auth.createUserWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-
-});
-
-btnSignUp.addEventListener('click', e =>{
-  const email = txtEmail.value;
-  const pass = txtPassword.value;
-  const auth = firebase.auth();
-
-  const promise = auth.signInWithEmailAndPassword(email,pass);
-  promise.catch(e => console.log(e.message));
-});
-
-btnLogout.addEventListener('click', e =>{
-  firebase.auth().signOut();
-});
-
-firebase.auth().onAuthStateChanged(firebaseuser =>{
-  if(firebaseuser){
-    console.log(firebaseuser);
-    btnLogout.classList.remove('hide');
-  }
-  else{
-    console.log('not logged in!');
-    btnLogout.classList.add('hide');
-  }
-});
