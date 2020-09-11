@@ -13,6 +13,11 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
+  //   const auth = firebase.auth;
+   //  auth.signInWithEmailAndPassword(email,pass);
+   //  auth.createUserWithEmailAndPassword(email,pass);
+   //  auth.onAuthStateChanged(firebaseuser => {});
+
 
     const txtEmail = document.getElementById('txtEmail');
     const txtPassword = document.getElementById('txtPassword');
@@ -53,4 +58,3 @@ firebase.auth().onAuthStateChanged(firebaseuser =>{
     btnLogout.classList.add('hide');
   }
 });
-
