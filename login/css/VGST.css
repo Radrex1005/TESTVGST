@@ -1,0 +1,126 @@
+body {
+    font-family: "Open Sans", helvetica, arial;
+    text-align: justify center;
+    background: -webkit-radial-gradient(rgb(59, 59, 216) 20%, #ffffff 100%);   
+     margin: 1vw;
+    border-radius: 1vw;
+    padding: 3vw;
+    }
+   table{
+    padding: 1vw;
+    margin: auto;
+    width: "100%";
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    
+    }
+    .wrapper {
+        text-align: center;
+    }
+  
+   table tr {
+    padding: 4px;
+    }
+   table th {
+    padding: 1vw;
+    background: rgb(86, 93, 160);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.;    
+   }
+   table td, th {
+    padding: 1vw 1vw 1vw 1vw;
+    border: 0.1vw solid  rgb(236, 237, 248);
+    font-size: 1.5vw;
+   }
+  
+
+   table tr:nth-of-type(even) {
+    background: #eee;
+   }
+    
+   .css-serial {
+    counter-reset: serial-number;
+   }
+   .css-serial td:first-child:before {
+    counter-increment: serial-number;
+    content: counter(serial-number);
+    width: 1vw;
+   }
+ 
+
+  h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+
+  td.sep{
+    width: 200px;
+    border: solid black;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+  }
+  td.picbox{
+    width: 400px;
+    height: 100px;
+    border-top: rgba(0, 0, 0, 0);
+    border-bottom: rgba(0, 0, 0, 0);
+    text-align: center;
+  }
+  .BLANK{
+    margin: auto;
+  }
+  p{
+  margin-left:20%;
+  float:left;
+  display:block;
+  }
+
+.change{
+        
+        width: 10vw;
+        padding: 0.5vw;
+        font-size: 1.5vw;
+        background-color: rgb(105, 106, 168);
+        color: #fff;
+        border: #ccc;
+        border-radius: 0.5vw;
+        margin-left: 23vw;
+        margin-top: 1.5vw;
+}
+.submit {
+  padding: 0.5vw;
+    margin: 1.5vw 0 0 40.5vw;
+    font-size: 1.5vw;
+    background-color: rgb(80, 182, 67);
+    border: #ccc;
+    border-radius: 0.5vw;
+}
+@media only screen and (max-width: 1080px) {
+
+  table td,th {
+    padding: 1vw 1vw 1vw 1vw;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 2.5vw;
+    width: 50vw;
+  }
+  table .unique{
+    width: 1vw;
+  }
+}
