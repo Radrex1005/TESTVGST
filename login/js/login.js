@@ -28,8 +28,3 @@ function print(){
     // ...
   });
 }
-
- function call(event){
-  var text = $(event.relatedTarget).text();
-  alert(text);
-};
