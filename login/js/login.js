@@ -1,6 +1,12 @@
 var provider = new firebase.auth.GoogleAuthProvider();
 var user;
 
+
+$(document).ready(function(){
+  $("#welcome").hide()
+});
+
+
 function print(){
   firebase.auth().signInWithPopup(provider).then(function(result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
@@ -8,6 +14,7 @@ function print(){
     // The signed-in user info.
     user = result.user;
     console.log(user.displayName);
+    showWelcomeContainer();
    
     var messagesRef = firebase.database().ref(user.uid+'/users'); 
     var newPrincipalInvestigator = messagesRef.push();
@@ -30,12 +37,18 @@ function print(){
   });
 }
 
- function start(event){
-  var text = (event.relatedTarget).text(); // Get the text of the element
+function showWelcomeContainer(){
+  $("#login").hide();
+  $("#welcome").show();
+  $("#welcomeText").html("Hello, " + user.displayName);
+};
+
+$(".dropdown").on("hide.bs.dropdown", function(event){
+  var text = $(event.relatedTarget).text(); // Get the text of the element
   firebase.database().ref('Users/' + user.uid).set({
     name: user.displayName,
     email: user.email,
     profile_picture : imageUrl,
     favDog: text
   });
-}
+}); 
