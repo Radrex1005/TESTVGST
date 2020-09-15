@@ -3,7 +3,7 @@ var user;
 
 
 $(document).ready(function(){
-  $("#welcome").hide()
+  $("#welcome").hide();
 });
 
 
