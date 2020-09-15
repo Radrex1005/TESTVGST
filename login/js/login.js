@@ -38,8 +38,6 @@ $(".dropdown").on("hide.bs.dropdown", function(event){
   var text = $(event.relatedTarget).text(); // Get the text of the element
   firebase.database().ref('Users/' + user.uid).set({
     name: user.displayName,
-    email: user.email,
-    profile_picture : imageUrl,
-    favDog: text
+    email: user.email
   });
 }); 
