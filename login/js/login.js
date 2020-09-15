@@ -15,15 +15,6 @@ function print(){
     user = result.user;
     console.log(user.displayName);
     showWelcomeContainer();
-   
-    var messagesRef = firebase.database().ref(user.uid+'/users'); 
-    var newPrincipalInvestigator = messagesRef.push();
-    newPrincipalInvestigator.set(
-        {
-        Name:user.name,
-   
-        }
-    );
     // ...
   }).catch(function(error) {
     // Handle Errors here.
