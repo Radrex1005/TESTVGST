@@ -3,70 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <title>VGST_LOGIN</title>
+        <link rel="stylesheet" href="../css/login.css">
+
         <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
-        <script src="/__/firebase/7.20.-/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+<script src="/__/firebase/7.20.-/firebase-database.js"></script>
 
-        <script>
-          // Your web app's Firebase configuration
-          var firebaseConfig = {
-            apiKey: "AIzaSyB85FVM5oFJMCKwjPn3-4WggRyDPLbfayM",
-            authDomain: "test-vgst.firebaseapp.com",
-            databaseURL: "https://test-vgst.firebaseio.com",
-            projectId: "test-vgst",
-            storageBucket: "test-vgst.appspot.com",
-            messagingSenderId: "182173305191",
-            appId: "1:182173305191:web:8fe759c2f8fa967dea87c2",
-            measurementId: "G-1YBD4TJXXW"
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-          firebase.analytics();
-        </script>
-
-        <script src="js/login.js"></script> 
-        <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
     </head>
-    <body>  
-      <div>
-        <div class="container" id="login">
-          <div class="row">
-          <div class="col-lg-12 text-center">
-          <h2 id="welcomeText"></h2>
-          <button type="button" class="btn btn-primary" onclick="print()"><i class="fa fa-google-plus"></i> Sign-In With Google</button>
-        </div>
-          </div>
-          </div><!-- /. container -->
-            <div class="container" id="welcome">
-            <div class="row">
-            <div class="col-lg-6">
-            <h2 id="welcomeText"></h2>
-            </div><br>
-            <div class="col-lg-6">
+    <body>
+      
+        <table class="Setup">
+            <tbody>
+                
+                <tr ><td class="start">VGST LOGIN</td></tr>
+                <tr>
+                    <td><button onclick="google()" id="signInWithGoogle">Login with your Google
+                        
+                      </button></td>
+                </tr>
+                    <tr>
+                   <td><input placeholder="Email" class="enter" type="email" id="email"></td>
+                </tr>
+            
+                    <tr>
+                   <td><input placeholder="Password" class="enter" type="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="signUp()" id="signUp"></button></td>
+                </tr>
+                <tr><td class="problem"><a class="atag" href="forgotpsw.html"><br>Forgot Password?</a></td></tr>
+                <tr>
+                    <td class="problem">Don't have an account? <a href="Register.html"> <button class="signup">Register</button></a></td>
+                </tr>
+                <tr>
+                    <td class="problem"><a href="login.html" > <button class="signup">Cancle</button></a></td>
+                </tr>
+            </tbody>
 
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-              <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-              </ul>
-            </div>
-          </div>
-      <div class="form">
-            <a href="https://ibb.co/jkKHYjx"><img src="https://i.ibb.co/1GVbN4p/VGST-IMG.png" alt="VGST-IMG"></a>
-            <button onclick="print()" id="btnLogin" class="submit01">Google Authentication</button><br>
-            <a href="dashboard.html" class="Started">Get Started</a>
-      </div>
-  
-  </body>
+        </table>
+    </body>
 </html>
