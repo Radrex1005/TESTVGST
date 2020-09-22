@@ -1,29 +1,173 @@
+body{
+    background-image: url(../css/Images/VGST.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 7vw;
+}
 
-.form {
-    border: 3px solid #f1f1f1;
-    border-radius: 20px;
-    width: 40vw;
-    height: 30vw;
+.Setup{
+    background-color: rgba(255, 241, 241, 0.76);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
     margin: auto;
-    margin-top: 6vw;
-    padding: 2vw;
-  }
-
-  .submit01 {
-    display: block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 1vw;
-    margin-top: 1vw;
-    margin: auto;
+    padding: 3vw;
+    widows: 10px;
+    color:  rgb(59, 59, 59);
+    margin-top: 12px;
+}
+.enter{
     border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 20vw;
-    font-size: 1.5vw;
-    transition: 0.5s ease-out;
-  }
-  
-img{
-  width: 40vw;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.787);
+    padding: 5px;
+    font-size: 17px;
+}
+
+.login{
+    height: 40px;
+    width: 130px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(96, 192, 66, 0.787);
+    border-radius: 5px;
+    margin-left: 115px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 2vw;
+}
+
+.signup{
+    height: 30px;
+    width: 80px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(255, 36, 36, 0.726);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.google{
+    height: 40px;
+    width: 310px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(55, 80, 189, 0.671);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.start{
+    border: #ff4848a9 solid;
+    border-top: #00000000;
+    border-left:  #00000000;
+    border-right:  #00000000;
+    font-size: 25px;
+    color: rgb(238, 67, 67);
+    margin-bottom: 30px;
+}
+.or{
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.problem{
+    text-align: center;
+}
+.atag{
+    color: rgb(59, 59, 59);
+}
+.create{
+    height: 40px;
+    width: 130px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(96, 192, 66, 0.787);
+    border-radius: 5px;
+    margin-left: 90px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 2vw;
+}
+
+
+
+
+@media only screen and (max-width: 1080px) {
+
+body{
+    background-image: url(../css/Images/smallVGST.jpg);
+    background-repeat: no-repeat;
+    padding: 8vw;
+    background-size: 150%;
+
+}
+
+.Setup{
+    background-color: rgba(255, 241, 241, 0.76);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: auto;
+    padding: 3vw;   
+    color:  rgb(59, 59, 59);
+    margin-top: 12px;
+}
+.enter{
+    border: none;
+    border-radius: 5px;
+    width: 500px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.787);
+    padding: 5px;
+}
+
+.login{
+    height: 30px;
+    width: 120px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(96, 192, 66, 0.787);
+    border-radius: 5px;
+    margin-left: 210px;
+    margin-top: 15px;
+}
+
+.signup{
+    height: 30px;
+    width: 80px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(255, 36, 36, 0.726);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.google{
+    height: 40px;
+    width: 500px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(55, 80, 189, 0.671);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.start{
+    border: #ff4848a9 solid;
+    border-top: #00000000;
+    border-left:  #00000000;
+    border-right:  #00000000;
+    font-size: 25px;
+    color: rgb(238, 67, 67);
+    margin-bottom: 30px;
+}
+.or{
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
 }
