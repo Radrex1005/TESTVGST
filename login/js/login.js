@@ -44,32 +44,33 @@ function google(){
     // ...
   });
 }
-	
-	function signUp(){
+		const temail = document.getElementById('temail');
+		const tpassword = document.getElementById('tpassword');
+		const signUp = document.getElementById('signUp');
+		const login = document.getElementById('login');
+
+		signUp.addEventListener('click', e =>{
 		
-		var email = document.getElementById("email");
-		var password = document.getElementById("password");
-		
-		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-		promise.catch(e => alert(e.message));
+
+		const email = temail.value;
+		const password = tpassword.value;
+		const auth = firebase.auth();
+	    auth.createUserWithEmailAndPassword(email, password);
+		promise.catch(e =>  console.log(e.message));
 		
 		alert("Signed Up");
-	}
+	});
 	
 	
 	
-	function signIn(){
+	login.addEventListener('click', e =>{
+		const email = temail.value;
+		const password = tpassword.value;
+        const auth = firebase.auth();
+		auth.signInWithEmailAndPassword(email, password);
+		promise.catch(e =>  console.log(e.message));
 		
-		var email = document.getElementById("email");
-		var password = document.getElementById("password");
-		
-		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-		promise.catch(e => alert(e.message));
-		
-		
-		
-		
-	}
+	});
 	
 	
 	function signOut(){
@@ -81,12 +82,13 @@ function google(){
 	
 	
 	
-	auth.onAuthStateChanged(function(user){
-		
-		if(user){
+
+	firebase.auth().onAuthStateChanged(firebaseUser => {
+		if(firebaseUser){
 			
-			var email = user.email;
+			var email = firebaseUser.email;
 			alert("Active User " + email);
+			console.log(firebaseUser);
 			
 			//Take user to a different or home page
 
@@ -97,11 +99,9 @@ function google(){
 			alert("No Active User");
 			//no user is signed in
 		}
-		
-		
-		
 	});
-
+		
+		
 
 	const signInWithGoogleButton = document.getElementById('signInWithGoogle');
 
